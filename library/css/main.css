@@ -1,0 +1,247 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #3d667d;
+}
+canvas {
+	border: 0;
+}
+svg image { pointer-events: none; }
+
+#content {
+	margin-top: 50px;
+}
+
+#viewport-container {
+	position: relative;
+	width: 1400px;
+	height: 600px;
+	padding: 0 200px;
+	margin: 0 auto;
+}
+#viewport {
+	font-size: 0;
+}
+#viewport-ui {
+	position: absolute;
+	left: 200px;
+	top: 0;
+	width: 1000px;
+	height: 100%;
+	z-index: 2000;
+}
+
+#startscreen {
+	margin-top: 200px;
+}
+#gametitle {
+	font-size: 120px;
+	font-weight: bold;
+	line-height: 80px;
+	text-align: center;
+}
+#gamesubtitle {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+#startnewgame-holder {
+	text-align: center;
+}
+.button-startnewgame {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#setup { display: none; }
+.instructions {
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 12px;
+}
+.map-size {
+	margin-bottom: 40px;
+}
+.map-size button {
+	display: block;
+	width: 300px;
+	font-size: 34px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 10px auto;
+}
+.party {
+	text-align: center;
+}
+.partymember {
+	display: inline-block;
+	background: #c4b179;
+	width: 200px;
+	padding: 10px;
+	margin: 0 10px;
+}
+.avatar-male,
+.avatar-female,
+.avatar-dead {
+	width: 180px;
+	height: 180px;
+	background-color: #dde1bc;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+}
+.avatar-male { background-image: url('../assets/img/party_male.png'); }
+.avatar-female { background-image: url('../assets/img/party_female.png'); }
+.avatar-dead { background-image: url('../assets/img/party_dead.png'); }
+.partymember button {
+	display: inline-block;
+	width: 38px;
+	text-align: center;
+}
+.partymember .party-gender {
+	display: inline-block;
+	width: 38px;
+	text-align: center;
+}
+.partymember input {
+	display: inline-block;
+	width: 136px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.partymember .party-name {
+	display: inline-block;
+	width: 136px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.partymember .party-status {
+	text-transform: capitalize;
+}
+.startgame-holder {
+	text-align: center;
+}
+.button-startgame {
+	font-size: 62px;
+	margin-top: 40px;
+}
+
+#content > .party {
+	padding: 0 200px;
+	margin-bottom: 20px;
+}
+#content > .party .party-name {
+	text-align: left;
+}
+
+#sidebar-left,
+#sidebar-right {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 200px;
+	height: 600px;
+	color: #fff;
+	background-color: #938060;
+	padding: 16px;
+}
+#sidebar-left { left: 0; }
+#sidebar-right { right: 0; }
+
+.time-holder {
+	margin-bottom: 6px;
+}
+.time-holder .day,
+.time-holder .time {
+	font-size: 18px;
+}
+.time-holder .day { float: left; }
+.time-holder .time { float: right; }
+.location {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: capitalize;
+	margin-bottom: 10px;
+}
+.elevation-holder {
+	font-size: 18px;
+	text-transform: capitalize;
+	margin-bottom: 16px;
+}
+.elevation {
+	font-weight: normal;
+}
+
+.map-key {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	font-size: 14px;
+	padding: 10px;
+}
+.map-key .entry {
+	margin-bottom: 5px;
+}
+.map-key img {
+	width: 22px;
+	height: 30px;
+}
+.map-key span {
+	margin-left: 10px;
+}
+
+.travel-preview {
+	display: none;
+}
+.travel-preview .distance-holder {
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+.travel-preview .distance-holder .distance { float: left; }
+.travel-preview .distance-holder .time { float: right; }
+
+#viewport-ui #map-overlay {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#viewport-ui #map-overlay .bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: .5;
+}
+#viewport-ui #map-overlay .message {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 500px;
+	height: 300px;
+	margin-left: -250px;
+	margin-top: -150px;
+	background-color: #fff;
+	padding: 16px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+#viewport-ui #map-overlay .message span { font-size: 20px; }
+#viewport-ui #map-overlay .message button { float: right; margin-top: 10px; margin-left: 10px; }
+
+#sidebar-left .option-reminder {
+	font-size: 14px;
+	font-style: italic;
+	text-align: center;
+	margin: 20px 0;
+}

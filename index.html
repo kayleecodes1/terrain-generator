@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Game AI - Final Project</title>
+		<link type="text/css" rel="stylesheet" href="library/css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="library/css/main.css" />
+	</head>
+	<body>
+
+		<div id="content">
+			<div id="viewport-container">
+				<div id="viewport"></div>
+				<div id="viewport-ui">
+					<div id="startscreen">
+						<div id="gametitle">EASTWARD</div>
+						<div id="gamesubtitle">A Procedural Adventure</div>
+						<div id="startnewgame-holder">
+							<button type="button" class="btn btn-warning btn-warning button-startnewgame">Start New Game</button>
+						</div>
+					</div>
+					<div id="setup">
+						<div class="map">
+							<div class="instructions">Select a map size:</div>
+							<div class="map-size">
+								<button type="button" class="btn btn-default btn-large" data-size="small">Small</button>
+								<button type="button" class="btn btn-warning btn-large active" data-size="medium">Medium</button>
+								<button type="button" class="btn btn-default btn-large" data-size="large">Large</button>
+							</div>
+						</div>
+						<div class="instructions">Create your party:</div>
+						<div class="party">
+							<div class="partymember">
+								<div class="avatar-male"></div>
+								<div>
+									<button type="button" class="btn btn-default btn-md button-gender" data-gender="male"><span>&#9794;</span></button>
+									<input type="text" class="form-control input-name" placeholder="Name">
+								</div>
+								<div class="party-status"></div>
+							</div>
+							<div class="partymember">
+								<div class="avatar-male"></div>
+								<div>
+									<button type="button" class="btn btn-default btn-md button-gender" data-gender="male"><span>&#9794;</span></button>
+									<input type="text" class="form-control input-name" placeholder="Name">
+								</div>
+								<div class="party-status"></div>
+							</div>
+							<div class="partymember">
+								<div class="avatar-male"></div>
+								<div>
+									<button type="button" class="btn btn-default btn-md button-gender" data-gender="male"><span>&#9794;</span></button>
+									<input type="text" class="form-control input-name" placeholder="Name">
+								</div>
+								<div class="party-status"></div>
+							</div>
+							<div class="partymember">
+								<div class="avatar-male"></div>
+								<div>
+									<button type="button" class="btn btn-default btn-md button-gender" data-gender="male"><span>&#9794;</span></button>
+									<input type="text" class="form-control input-name" placeholder="Name">
+								</div>
+								<div class="party-status"></div>
+							</div>
+						</div>
+						<div class="startgame-holder">
+							<button type="button" class="btn btn-warning btn-lg button-startgame">Start Game</button>
+						</div>
+					</div>
+					<div id="map-overlay">
+						<div class="bg"></div>
+						<div class="message">
+							<span>Text goes here.</span>
+							<div class="buttons-holder">
+								<button type="button" class="btn btn-warning btn-lg button-closemessage">Okay</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="sidebar-left">
+					<div class="time-holder">
+						<span class="day">Day 1</span>
+						<span class="time">12:00PM</span>
+						<div class="clearfix"></div>
+					</div>
+					<div class="location"></div>
+					<div class="elevation-holder">Elevation: <span class="elevation"></span></div>
+
+					<div class="options">
+						<button id="option-inspect" type="button" class="btn btn-warning btn-lg btn-block">Inspect</button>
+						<button id="option-travel" type="button" class="btn btn-warning btn-lg btn-block">Travel</button>
+						<button id="option-rest" type="button" class="btn btn-warning btn-lg btn-block">Rest</button>
+					</div>
+
+					<div class="map-key">
+						<div class="entry"><img src="library/assets/img/markerStar.png" /><span>Caravan</span></div>
+						<div class="entry"><img src="library/assets/img/markerStar_yellow.png" /><span>Destination</span></div>
+						<div class="entry"><img src="library/assets/img/markerHouse.png" /><span>Town</span></div>
+					</div>
+				</div>
+				<div id="sidebar-right">
+					<div class="travel-preview">
+						<div class="distance-holder">
+							<span class="distance"></span>
+							<span class="time"></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="location"></div>
+						<div class="elevation-holder">Elevation: <span class="elevation"></span></div>
+						<div class="river-crossing">River Crossing</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="library/js/lib/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="library/js/lib/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="library/js/lib/rhill-voronoi-core.min.js"></script>
+		<script type="text/javascript" src="library/js/lib/perlin.js"></script>
+		<script type="text/javascript" src="library/js/lib/raphael-min.js"></script>
+
+		<!--<script type="text/javascript" src="library/js/lib/rAF.js"></script>
+		<script type="text/javascript" src="library/js/lib/three.min.js"></script>
+		<script type="text/javascript" src="library/js/lib/THREEx.WindowResize.js"></script>
+		<script type="text/javascript" src="library/js/lib/tween.min.js"></script>-->
+
+		<script type="text/javascript" src="library/js/HashMap.js"></script>
+
+		<script type="text/javascript" src="library/js/Map.js"></script>
+		<script type="text/javascript" src="library/js/Game.js"></script>
+		<script type="text/javascript" src="library/js/Renderer.js"></script>
+		<script type="text/javascript" src="library/js/main.js"></script>
+	</body>
+</html>
